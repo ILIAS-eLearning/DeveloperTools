@@ -2,31 +2,38 @@
 #set -x
 #set -e
 count=0
+skiplint=`cat git_hooks/support/skiplint_buf`
 
-red=`tput setaf 1`
-green=`tput setaf 2`
-reset=`tput sgr0`
-echo "checking for variable variables"
-for file in $(git diff --cached --name-only --diff-filter=ACM | grep -e '\.php$')
-do
-	if 	./git_hooks/composer/vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=git_hooks/ilCodingStandard ${file}
-	then
-		echo "${green} $file ok ${reset}"
-	else
-		echo -e "${red}$file is not obeying ilCodeStandarts, trying autocorrect${reset}\n"
-		git reset ${file}
-		./git_hooks/composer/vendor/squizlabs/php_codesniffer/scripts/phpcbf --standard=git_hooks/ilCodingStandard ${file}
-		#in the condition below we finally ignore warnings. However, one will still get a notion.
-		if 	./git_hooks/composer/vendor/squizlabs/php_codesniffer/scripts/phpcs --runtime-set ignore_warnings_on_exit true --standard=git_hooks/ilCodingStandard ${file}
+if [ "$skiplint" != "skiplint" ]
+then
+	red=`tput setaf 1`
+	green=`tput setaf 2`
+	reset=`tput sgr0`
+	echo "checking code format"
+	for file in $(git diff --cached --name-only --diff-filter=ACM | grep -e '\.php$')
+	do
+		if 	./git_hooks/composer/vendor/squizlabs/php_codesniffer/scripts/phpcs --standard=git_hooks/ilCodingStandard ${file}
 		then
-			git add ${file}
 			echo "${green} $file ok ${reset}"
 		else
-			count+=1
-			echo -e "autocorrect failed, please correct by hand"
+			echo -e "${red}$file is not obeying ilCodeStandarts, trying autocorrect${reset}\n"
+			git reset ${file}
+			./git_hooks/composer/vendor/squizlabs/php_codesniffer/scripts/phpcbf --standard=git_hooks/ilCodingStandard ${file}
+			#in the condition below we finally ignore warnings. However, one will still get a notion.
+			if 	./git_hooks/composer/vendor/squizlabs/php_codesniffer/scripts/phpcs --runtime-set ignore_warnings_on_exit true --standard=git_hooks/ilCodingStandard ${file}
+			then
+				git add ${file}
+				echo "${green} $file ok ${reset}"
+			else
+				count+=1
+				echo -e "autocorrect failed, please correct by hand"
+			fi
 		fi
-	fi
-done
+	done
+else
+	git_hooks/skiplint
+fi
+
 
 if [[ $count -gt 0 ]]
 then 

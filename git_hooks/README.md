@@ -7,7 +7,7 @@ Only use this in unixy environment at your own risk.
 
 Introducing Githooks in order to streamline the
 development and catch possible errors at an early stage
-during the release.
+of development.
 
 
 # Introduction
@@ -29,4 +29,27 @@ Utility-scripts, which are called by the git hooks, should be placed
 in the `support`-folder. Also, please refer to the already present
 pre-commit hook, which should serve as a fine example.
 
+# Options
 
+## Skip linting at next commit
+
+When using staged commits it is not recommendet to use linting, since the
+whole file will be commited. To bypass this problem one may use the skiplint
+script, which will set a flag, that causes the linting step in the pre commit
+to be omited at next commit. To set this flag, just run the skiplint script 
+which is located in the git_hooks directory. 
+
+Notice: git_hooks doesn't need to be you working directory to run skipling.
+For instance, running skipling via
+../git_hooks/skiplint
+from the Services drectory works just fine.
+
+You may enable linting by running skiplint again. Also, the flag will be unset,
+after the next commit.
+
+## Lint a file
+
+You may force the linting of a file without performing any other chages by
+running the lint_file script, which is located inside the git_hooks directory.
+The only parameter is the path of the file of interest relative to current
+directory.

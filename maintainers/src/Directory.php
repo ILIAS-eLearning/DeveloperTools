@@ -92,26 +92,28 @@ class Directory extends JsonSerializable {
 	public function inheritMaintainersFromComponent() {
 		$this->populate();
 
-		if ($this->getFirstMaintainer()->getUsername() == ''
-		    && $this->getBelongToComponent()->getFirstMaintainer()->getUsername() != ''
+		$force = false;
+
+		if (($this->getFirstMaintainer()->getUsername() == ''
+		    && $this->getBelongToComponent()->getFirstMaintainer()->getUsername() != '') || $force
 
 		) {
 			$this->setFirstMaintainer($this->getBelongToComponent()->getFirstMaintainer());
 		}
-		if ($this->getSecondMaintainer()->getUsername() == ''
-		    && $this->getBelongToComponent()->getSecondMaintainer()->getUsername() != ''
+		if (($this->getSecondMaintainer()->getUsername() == ''
+		    && $this->getBelongToComponent()->getSecondMaintainer()->getUsername() != '') || $force
 
 		) {
 			$this->setSecondMaintainer($this->getBelongToComponent()->getSecondMaintainer());
 		}
-		if ($this->getTester()->getUsername() == ''
-		    && $this->getBelongToComponent()->getTester()->getUsername() != ''
+		if (($this->getTester()->getUsername() == ''
+		    && $this->getBelongToComponent()->getTester()->getUsername() != '') || $force
 
 		) {
 			$this->setTester($this->getBelongToComponent()->getTester());
 		}
-		if ($this->getTestcaseWriter()->getUsername() == ''
-		    && $this->getBelongToComponent()->getTestcaseWriter()->getUsername() != ''
+		if (($this->getTestcaseWriter()->getUsername() == ''
+		    && $this->getBelongToComponent()->getTestcaseWriter()->getUsername() != '') || $force
 
 		) {
 			$this->setTestcaseWriter($this->getBelongToComponent()->getTestcaseWriter());

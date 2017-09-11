@@ -17,8 +17,8 @@ You need PHP7 to run this script.
 
 The following commands are available:
 ```
-php run.php -c maintainers # Lists all already regsitred maintainers
-php run.php -c components # Lists alls already registred components
+php run.php -c maintainers # Lists all already registered maintainers
+php run.php -c components # Lists alls already registered components
 php run.php -c generate # generated the /docs/documentation/maintenance.md File
 php run.php -c usage # Lists all available commands
 ```
@@ -72,7 +72,7 @@ $ sudo apt-get install php7.0-mbstring
 ```
 
 **Step 3:**
-Check if your maintainer-account is already registred:
+Check if your maintainer-account is already registered:
 ```
 $ php run.php -c maintainers
 Available Maintainers:
@@ -97,7 +97,7 @@ Add a line
 if missing.
 
 **Step 4:**
-Chek if your component already are registred:
+Check if your component already are registered:
 ```
 $ php run.php -c components
 
@@ -149,7 +149,7 @@ vi /Services/AccessControl/maintenance.json
     "tester": "", # Same format as first-maintainer
     "testcase_writer": "", # Same format as first-maintainer
     "path": "Services/AccessControl", # You do not have to change this
-    "belong_to_component": "None", # Write teh exact name of the component as its registred in components.json
+    "belong_to_component": "None", # Write teh exact name of the component as its registered in components.json
     "used_in_components": [] # If this directory is used in several components, list them (with the exact name).
 }
 ```

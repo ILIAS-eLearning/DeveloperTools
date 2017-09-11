@@ -13,6 +13,7 @@ use League\Flysystem\Filesystem;
 class Component extends JsonSerializable {
 
 	const MISSING = "MISSING";
+
 	/**
 	 * @var Component[]
 	 */
@@ -29,6 +30,7 @@ class Component extends JsonSerializable {
 
 	/**
 	 * @param string $name
+	 *
 	 * @return \ILIAS\Tools\Maintainers\Component
 	 */
 	public static function getInstance($name) {
@@ -128,7 +130,7 @@ class Component extends JsonSerializable {
 
 	/**
 	 * @param \League\Flysystem\Filesystem $filesystem
-	 * @param string $path_to_file
+	 * @param string                       $path_to_file
 	 */
 	public static function writeComponentsJson(Filesystem $filesystem, $path_to_file = 'Customizing/global/tools/maintainers/components.json') {
 		if (!$filesystem->has($path_to_file)) {
@@ -136,7 +138,9 @@ class Component extends JsonSerializable {
 		}
 		$components = array();
 		foreach (self::getRegistredInstances() as $component) {
-			if ($component->getName() == 'None' || $component->getName() == 'All') {
+			if ($component->getName() == 'None'
+			    || $component->getName() == 'All'
+			) {
 				continue;
 			}
 			$components[$component->getName()] = $component->serialize();
@@ -149,7 +153,7 @@ class Component extends JsonSerializable {
 
 	/**
 	 * @param \League\Flysystem\Filesystem $filesystem
-	 * @param string $path_to_file
+	 * @param string                       $path_to_file
 	 */
 	public static function loadComponentsJson(Filesystem $filesystem, $path_to_file = 'Customizing/global/tools/maintainers/components.json') {
 		if (!$filesystem->has($path_to_file)) {
@@ -168,13 +172,15 @@ class Component extends JsonSerializable {
 
 	/**
 	 * @param $property_name
+	 *
 	 * @return string
 	 */
 	protected function getTextOrMissing($property_name) {
 		$value = $this->{$property_name};
 		if ($value instanceof Maintainer) {
-			return $value->getLinkedProfile();
+			return $value->getLinkedProfile($property_name);
 		}
+
 
 		return $value ? $value : self::MISSING;
 	}

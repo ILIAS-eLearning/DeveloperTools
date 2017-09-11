@@ -37,3 +37,15 @@ If the line does contain a "###deprecated" comment, but does not appear in engli
 Example:
 
     python mark_deprecated_vars_in_other_languages.py /Users/Doe/Sites/ilias5_2/ILIAS/lang/ilias_en.lang
+    
+    
+## 3-. REMOVE ALL LINES CONTAINING ###deprecated
+file -> remove_marked_deprecates.py
+
+Before executing the script, is highly recommended to duplicate the language file that is wanted to modify.
+
+This script parses a language file and removes lines containing "###deprecated" at the end.
+
+Example:
+
+    python remove_marked_deprecates.py /Users/Doe/Sites/trunk/ILIAS/lang/ilias_en.lang        

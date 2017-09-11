@@ -63,7 +63,8 @@ class MarkdownWriter {
 		$seperator = "<!-- REMOVE -->";
 		$md = strstr($filesystem->read($path_to_file), $seperator, true) . $seperator . "\n";
 
-		$components = $this->getCollector()->getComponents();
+//		$components = $this->getCollector()->getComponents();
+		$components =Component::getRegistredInstances();
 		ksort($components);
 		
 		foreach ($components as $component) {
@@ -119,17 +120,17 @@ class MarkdownWriter {
 			$md .= "\n";
 		}
 
-		$md .= "\n\nThe following directories are currently maintained unter the Classic-Maintenace-Model:\n";
-		/**
-		 * @var $coordinator \ILIAS\Tools\Maintainers\Maintainer
-		 */
-		$directories = $this->getCollector()->getByModell(Directory::CLASSIC);
-		ksort($directories);
-		foreach ($directories as $directory) {
-			$directory->populate();
-
-			$md .= "* {$directory->getPath()}\n (1st Maintainer: {$directory->getFirstMaintainer()->getLinkedProfile()})\n";
-		}
+//		$md .= "\n\nThe following directories are currently maintained unter the Classic-Maintenace-Model:\n";
+//		/**
+//		 * @var $coordinator \ILIAS\Tools\Maintainers\Maintainer
+//		 */
+//		$directories = $this->getCollector()->getByModell(Directory::CLASSIC);
+//		ksort($directories);
+//		foreach ($directories as $directory) {
+//			$directory->populate();
+//
+//			$md .= "* {$directory->getPath()}\n (1st Maintainer: {$directory->getFirstMaintainer()->getLinkedProfile()})\n";
+//		}
 
 		$md .= "\n\nThe following directories are currently maintained unter the Service-Maintenace-Model:\n";
 		/**

@@ -12,6 +12,7 @@ use League\Flysystem\Filesystem;
  */
 class Maintainer extends JsonSerializable {
 
+	const TESTER_MISSING = "[TESTERS MISSING](http://www.ilias.de/docu/goto_docu_pg_64423_4793.html)";
 	/**
 	 * @var \ILIAS\Tools\Maintainers\Maintainer[]
 	 */
@@ -61,10 +62,17 @@ class Maintainer extends JsonSerializable {
 	/**
 	 * @return string
 	 */
-	public function getLinkedProfile() {
+	public function getLinkedProfile($property_name = null) {
 		switch (true) {
 			case ($this->getUserId() == 0 && $this->getUsername() == ''):
-				return "MISSING";
+				switch ($property_name) {
+					case 'tester':
+					case 'testcase_writer':
+						return self::TESTER_MISSING;
+						break;
+					default;
+						return "MISSING";
+				}
 			case ($this->getUserId() == 0 && !$this->getUsername() == ''):
 				return $this->getUsername();
 		}
@@ -75,6 +83,7 @@ class Maintainer extends JsonSerializable {
 
 	/**
 	 * @param $string
+	 *
 	 * @return \ILIAS\Tools\Maintainers\Maintainer
 	 */
 	public static function fromString($string) {
@@ -108,11 +117,13 @@ class Maintainer extends JsonSerializable {
 
 	/**
 	 * @param $maintainer
+	 *
 	 * @return string
 	 */
 	public static function stringify($maintainer) {
 		if ($maintainer instanceof Maintainer) {
-			if ($maintainer->getUserId() == 0 && $maintainer->getUsername() == ''
+			if ($maintainer->getUserId() == 0
+			    && $maintainer->getUsername() == ''
 			    || $maintainer->getUsername() == '(0)'
 			) {
 				return '';
@@ -130,7 +141,7 @@ class Maintainer extends JsonSerializable {
 
 	/**
 	 * @param \League\Flysystem\Filesystem $filesystem
-	 * @param string $path_to_file
+	 * @param string                       $path_to_file
 	 */
 	public static function writeMaintainerJson(Filesystem $filesystem, $path_to_file = 'Customizing/global/tools/maintainers/maintainers.json') {
 		if (!$filesystem->has($path_to_file)) {
@@ -147,7 +158,7 @@ class Maintainer extends JsonSerializable {
 
 	/**
 	 * @param \League\Flysystem\Filesystem $filesystem
-	 * @param string $path_to_file
+	 * @param string                       $path_to_file
 	 */
 	public static function loadMaintainerJson(Filesystem $filesystem, $path_to_file = 'Customizing/global/tools/maintainers/maintainers.json') {
 		if (!$filesystem->has($path_to_file)) {

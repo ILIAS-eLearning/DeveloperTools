@@ -109,7 +109,7 @@ class MarkdownWriter {
 			$md .= "* **{$name}**\n";
 			$md .= "\t* Coordinators: ";
 			foreach ($component->getCoordinators() as $coordinator) {
-				$md .= $coordinator->getLinkedProfile() . ' ';
+				$md .= $coordinator->getLinkedProfile() . ', ';
 			}
 			$md .= "\n";
 			$md .= "\t* Used in Directories: ";
@@ -141,7 +141,7 @@ class MarkdownWriter {
 		foreach ($directories1 as $directory) {
 			$directory->populate();
 
-			$md .= "* {$directory->getPath()}\n (Coordinator: {$directory->getCoordinator()->getLinkedProfile()})\n";
+			$md .= "* {$directory->getPath()}\n";
 		}
 
 		$md .= "\n\nThe following directories are currently unmaintained:\n";

@@ -29,9 +29,9 @@ class Directory extends JsonSerializable {
 	 */
 	protected $implicit_maintainers = array();
 	/**
-	 * @var \ILIAS\Tools\Maintainers\Maintainer
+	 * @var \ILIAS\Tools\Maintainers\Maintainer[]
 	 */
-	protected $coordinator = '';
+	protected $coordinator = array();
 	/**
 	 * @var \ILIAS\Tools\Maintainers\Maintainer
 	 */
@@ -69,20 +69,26 @@ class Directory extends JsonSerializable {
 		switch ($this->getMaintenanceModel()) {
 			case self::CLASSIC:
 				$direct_maintainers = ($this->first_maintainer instanceof Maintainer
-				                       && $this->first_maintainer->getUsername())
-				                      || ($this->second_maintainer instanceof Maintainer
-				                          && $this->second_maintainer->getUsername())
-				                      || count($this->implicit_maintainers) > 0;
+						&& $this->first_maintainer->getUsername())
+					|| ($this->second_maintainer instanceof Maintainer
+						&& $this->second_maintainer->getUsername())
+					|| count($this->implicit_maintainers) > 0;
 
 				$related_maintainers = $this->belong_to_component instanceof Component
-				                       && ($this->belong_to_component->getFirstMaintainer()
-				                                                     ->getUsername() != ''
-				                           || $this->belong_to_component->getSecondMaintainer()
-				                                                        ->getUsername() != '');
+					&& ($this->belong_to_component->getFirstMaintainer()
+							->getUsername() != ''
+						|| $this->belong_to_component->getSecondMaintainer()
+							->getUsername() != '');
 
 				return ($direct_maintainers || $related_maintainers);
 			case self::SERVICE:
-				return ($this->coordinator instanceof Maintainer);
+				foreach ($this->coordinator as $value) {
+					if ($value instanceof Maintainer) {
+						return true;
+					}
+				}
+
+				return false;
 			default:
 				return false;
 		}
@@ -95,25 +101,29 @@ class Directory extends JsonSerializable {
 		$force = false;
 
 		if (($this->getFirstMaintainer()->getUsername() == ''
-		    && $this->getBelongToComponent()->getFirstMaintainer()->getUsername() != '') || $force
+				&& $this->getBelongToComponent()->getFirstMaintainer()->getUsername() != '')
+			|| $force
 
 		) {
 			$this->setFirstMaintainer($this->getBelongToComponent()->getFirstMaintainer());
 		}
 		if (($this->getSecondMaintainer()->getUsername() == ''
-		    && $this->getBelongToComponent()->getSecondMaintainer()->getUsername() != '') || $force
+				&& $this->getBelongToComponent()->getSecondMaintainer()->getUsername() != '')
+			|| $force
 
 		) {
 			$this->setSecondMaintainer($this->getBelongToComponent()->getSecondMaintainer());
 		}
 		if (($this->getTester()->getUsername() == ''
-		    && $this->getBelongToComponent()->getTester()->getUsername() != '') || $force
+				&& $this->getBelongToComponent()->getTester()->getUsername() != '')
+			|| $force
 
 		) {
 			$this->setTester($this->getBelongToComponent()->getTester());
 		}
 		if (($this->getTestcaseWriter()->getUsername() == ''
-		    && $this->getBelongToComponent()->getTestcaseWriter()->getUsername() != '') || $force
+				&& $this->getBelongToComponent()->getTestcaseWriter()->getUsername() != '')
+			|| $force
 
 		) {
 			$this->setTestcaseWriter($this->getBelongToComponent()->getTestcaseWriter());
@@ -124,6 +134,7 @@ class Directory extends JsonSerializable {
 	/**
 	 * @param $from
 	 * @param $to
+	 *
 	 * @return bool
 	 */
 	public function renameComponent($from, $to) {
@@ -250,7 +261,7 @@ class Directory extends JsonSerializable {
 	 * @return bool
 	 */
 	public function hasComponents() {
-		return ($this->getUsedinComponents() != array( 'None' ));
+		return ($this->getUsedinComponents() != array('None'));
 	}
 
 
@@ -263,7 +274,7 @@ class Directory extends JsonSerializable {
 
 
 	/**
-	 * @return Maintainer
+	 * @return Maintainer[]
 	 */
 	public function getCoordinator() {
 		return $this->coordinator;
@@ -271,9 +282,9 @@ class Directory extends JsonSerializable {
 
 
 	/**
-	 * @param Maintainer $coordinator
+	 * @param Maintainer[] $coordinator
 	 */
-	public function setCoordinator(Maintainer $coordinator) {
+	public function setCoordinator(array $coordinator) {
 		$this->coordinator = $coordinator;
 	}
 
@@ -337,7 +348,15 @@ class Directory extends JsonSerializable {
 	private function populateMaintainers() {
 		$this->first_maintainer = Maintainer::fromString($this->first_maintainer);
 		$this->second_maintainer = Maintainer::fromString($this->second_maintainer);
-		$this->coordinator = Maintainer::fromString($this->coordinator);
+		if (is_string($this->coordinator)) {
+			$tmp = $this->coordinator;
+			$this->coordinator = array();
+			$this->coordinator[] = $tmp;
+		}
+		foreach ($this->coordinator as $k => $item) {
+			$this->coordinator[$k] = Maintainer::fromString($item);
+		}
+
 		foreach ($this->implicit_maintainers as $k => $implicit_maintainer) {
 			$this->implicit_maintainers[$k] = Maintainer::fromString($implicit_maintainer);
 		}
@@ -349,7 +368,9 @@ class Directory extends JsonSerializable {
 	private function stringifyMaintainers() {
 		$this->first_maintainer = Maintainer::stringify($this->first_maintainer);
 		$this->second_maintainer = Maintainer::stringify($this->second_maintainer);
-		$this->coordinator = Maintainer::stringify($this->coordinator);
+		foreach ($this->coordinator as $k => $item) {
+			$this->coordinator[$k] = Maintainer::stringify($item);
+		}
 		foreach ($this->implicit_maintainers as $k => $implicit_maintainer) {
 			$this->implicit_maintainers[$k] = Maintainer::stringify($implicit_maintainer);
 		}

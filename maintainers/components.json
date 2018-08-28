@@ -982,7 +982,8 @@
         "testcase_writer": "",
         "model": "Service",
         "coordinators": [
-            "amstutz(26468)"
+            "amstutz(26468)",
+            "rklees(34047)"
         ]
     },
     "Course Management": {

@@ -95,7 +95,7 @@ class MarkdownWriter {
 			$md .= "\n";
 		}
 
-		$md .= "\nComponents in the Service-Maintenance-Model:\n";
+		$md .= "\nComponents in the Coordinator Model [Coordinator Model](maintenance-coordinator.md):\n";
 
 		foreach ($components as $component) {
 			$component->populate();
@@ -132,7 +132,7 @@ class MarkdownWriter {
 //			$md .= "* {$directory->getPath()}\n (1st Maintainer: {$directory->getFirstMaintainer()->getLinkedProfile()})\n";
 //		}
 
-		$md .= "\n\nThe following directories are currently maintained unter the Service-Maintenace-Model:\n";
+		$md .= "\n\nThe following directories are currently maintained under the [Coordinator Model](maintenance-coordinator.md):\n";
 		/**
 		 * @var $coordinator \ILIAS\Tools\Maintainers\Maintainer
 		 */

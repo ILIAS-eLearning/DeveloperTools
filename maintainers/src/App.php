@@ -80,7 +80,7 @@ class App {
 
 			case self::CMD_GENERATE:
 				$MaintenanceReader = new Iterator($this->cli->arguments->get('path'));
-				$MaintenanceReader->runFor(array( 'Services', 'Modules', 'src' ));
+				$MaintenanceReader->runFor(array( 'Factory', 'Modules', 'src' ));
 				$this->cli->shout('ILIAS has ' . $MaintenanceReader->getCollector()
 				                                                   ->howManyMaintained()
 				                  . ' maintained and ' . $MaintenanceReader->getCollector()
@@ -110,7 +110,7 @@ class App {
 				$to = $this->cli->arguments->get('to');
 
 				$MaintenanceReader = new Iterator($this->cli->arguments->get('path'));
-				$MaintenanceReader->runFor(array( 'Services', 'Modules', 'src' ), null, $from, $to);
+				$MaintenanceReader->runFor(array( 'Factory', 'Modules', 'src' ), null, $from, $to);
 				break;
 		}
 	}

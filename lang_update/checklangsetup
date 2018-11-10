@@ -1,0 +1,120 @@
+#! /usr/bin/php
+<?php
+
+// checks all language in current directory
+// use "checklang --repair" to add missing variables
+
+error_reporting(0);
+
+$eng_array = array();
+$comp_array = array();
+
+function getEnglishLangFile()
+{
+	global $eng_array;
+
+	// check whether both arguments are files
+	if (!is_file("setup_en.lang"))
+	{
+		die ("setup_en.lang is not a file.\n");
+	}
+
+	// read file 1
+	if ($handle = fopen("setup_en.lang", "r"))
+	{
+		while (false !== ($line = fgets($handle, 4096)))
+		{
+			$arr = explode("#:#", $line);
+			if ($arr[1] != "")
+			{
+				$eng_array[$arr[0]] =
+					substr($arr[1], 0, strlen($arr[1])-1);
+			}
+		}
+		fclose($handle);
+	}
+}
+
+function compareFile($a_file)
+{
+	global $comp_array;
+
+	$comp_array = array();
+	
+	// check whether both arguments are files
+	if (!is_file($a_file))
+	{
+		die ($a_file." is not a file.\n");
+	}
+
+	// compare file
+	if ($handle = fopen($a_file, "r"))
+	{
+		while (false !== ($line = fgets($handle, 4096)))
+		{
+			$arr = explode("#:#", $line);
+			if ($arr[1] != "")
+			{
+				$comp_array[$arr[0]] =
+					substr($arr[1], 0, strlen($arr[1])-1);
+			}
+		}
+		fclose($handle);
+	}
+	
+	outputStatus($a_file);
+}
+
+function outputStatus($a_file)
+{
+	global $eng_array, $comp_array, $argv;
+	
+	// output all variables only in file 1
+	echo "Missing in $a_file\n";
+	echo "===================================\n";
+	if (trim($argv[1] == "--repair"))
+	{
+		$fh = fopen($a_file, "a");
+	}
+	foreach($eng_array as $key => $val)
+	{
+		if (!isset($comp_array[$key]))
+		{
+			echo $key."#:#".$val."###\n";
+			
+			if (trim($argv[1] == "--repair"))
+			{
+				$newline = $key."#:#".$val;
+				if (!is_int(strpos($val, "###")))
+				{
+					$newline.= "###".date("d m Y")." new variable";
+				}
+				fwrite($fh, $newline."\n");
+			}
+		}
+	}
+	if (trim($argv[1] == "--repair"))
+	{
+		fclose($fh);
+	}
+	echo "\n";
+}
+
+getEnglishLangFile();
+
+if ($handle = opendir("."))
+{
+	while (false !== ($file = readdir($handle)))
+	{
+		if ($file != "." && $file != ".." && $file != "setup_en.lang")
+		{
+			if (eregi("^setup_..\.lang$", $file))
+			{
+				compareFile($file);
+			}
+		}
+	}
+	closedir($handle);
+}
+
+?>

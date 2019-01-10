@@ -4,7 +4,7 @@
 // checks all language in current directory
 // use "checklang --repair" to add missing variables
 
-error_reporting(0);
+//error_reporting(0);
 
 $eng_array = array();
 $comp_array = array();
@@ -25,7 +25,7 @@ function getEnglishLangFile()
 		while (false !== ($line = fgets($handle, 4096)))
 		{
 			$arr = explode("#:#", $line);
-			if ($arr[1] != "")
+			if (isset($arr[1]) && $arr[1] != "")
 			{
 				//$arr2 = substr($arr[2], 0, strlen($arr[2])-1);
 				$arr2 = str_replace(array("\n", "\r"), array("", ""), $arr[2]);
@@ -54,7 +54,7 @@ function compareFile($a_file)
 	}
 
 	// get output file
-	if (trim($argv[1] == "--repair"))
+	if (isset($argv[1]) && trim($argv[1] == "--repair"))
 	{
 		$output_file = fopen($a_file.".new", "w");
 	}
@@ -65,6 +65,11 @@ function compareFile($a_file)
 		while (false !== ($line = fgets($handle, 4096)))
 		{
 			$arr = explode("#:#", $line);
+			if(!isset($arr[1]))
+			{
+				$arr[1] = "";
+			}
+
 			if ($arr[1] != "")
 			{
 				$comp_array[$arr[0]."#:#".$arr[1]] =
@@ -74,7 +79,7 @@ function compareFile($a_file)
 			// write line by line to new output file
 			if ($arr[1] == "" || isset($eng_array[$arr[0]."#:#".$arr[1]]))
 			{
-				if (trim($argv[1] == "--repair"))
+				if (isset($argv[1]) && trim($argv[1] == "--repair"))
 				{
 					if (substr($line, strlen($line)-1) != "\n")
 					{
@@ -97,7 +102,7 @@ function compareFile($a_file)
 	outputStatus($a_file);
 
 	// close output file
-	if (trim($argv[1] == "--repair"))
+	if (isset($argv[1]) && trim($argv[1] == "--repair"))
 	{
 		fclose($output_file);
 		rename($a_file.".new", $a_file);
@@ -120,7 +125,7 @@ function outputStatus($a_file)
 			echo $key."#:#".$val."###\n";
 			
 			// Write missing line to end of output file
-			if (trim($argv[1] == "--repair"))
+			if (isset($argv[1]) && trim($argv[1] == "--repair"))
 			{
 				$newline = $key."#:#".$val;
 				if (!is_int(strpos($val, "###")))
@@ -134,7 +139,7 @@ function outputStatus($a_file)
 
 	echo "\n";
 }
-
+echo("Read english lang file...");
 getEnglishLangFile();
 
 if ($handle = opendir("."))
@@ -143,8 +148,9 @@ if ($handle = opendir("."))
 	{
 		if ($file != "." && $file != ".." && $file != "ilias_en.lang")
 		{
-			if (eregi("^ilias_..\.lang$", $file))
+			if (preg_match("/^ilias_..\.lang$/", $file))
 			{
+				//echo("Check File: " . $file);
 				compareFile($file);
 			}
 		}

@@ -82,7 +82,7 @@
     "Setup": {
         "directories": [],
         "name": "Setup",
-        "first_maintainer": "akill(149)",
+        "first_maintainer": "rklees(34047)",
         "second_maintainer": "smeyer(191)",
         "tester": "aarsenij(41159)",
         "testcase_writer": "kunkel(115)",
@@ -423,6 +423,18 @@
         "model": "Classic",
         "coordinators": []
     },
+    "Learning History": {
+        "directories": [
+            "Services/LearningHistory"
+        ],
+        "name": "Learning History",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": []
+    },
     "Mail": {
         "directories": [
             "Services/Mail"
@@ -476,7 +488,7 @@
             "Services/MyStaff"
         ],
         "name": "MyStaff",
-        "first_maintainer": "",
+        "first_maintainer": "fschmid(21087)",
         "second_maintainer": "",
         "tester": "",
         "testcase_writer": "",
@@ -866,6 +878,32 @@
         "first_maintainer": "kunkel(115)",
         "second_maintainer": "fneumann(1560)",
         "tester": "kunkel(115)",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": []
+    },
+    "Learning Sequence": {
+        "directories": [
+            "Services/KioskMode",
+            "Modules/LearningSequence"
+        ],
+        "name": "Learning Sequence",
+        "first_maintainer": "rklees(34047)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": []
+    },
+    "General Kiosk-Mode": {
+        "directories": [
+            "Services/KioskMode",
+            "src/KioskMode"
+        ],
+        "name": "General Kiosk-Mode",
+        "first_maintainer": "rklees(34047)",
+        "second_maintainer": "",
+        "tester": "",
         "testcase_writer": "",
         "model": "Classic",
         "coordinators": []

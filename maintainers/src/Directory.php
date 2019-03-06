@@ -2,6 +2,8 @@
 
 namespace ILIAS\Tools\Maintainers;
 
+use League\CLImate\CLImate;
+
 /**
  * Class Directory
  *
@@ -95,10 +97,15 @@ class Directory extends JsonSerializable {
 	}
 
 
-	public function inheritMaintainersFromComponent() {
+	public function inheritMaintainersFromComponent(CLImate $cli = null) {
 		$this->populate();
 
 		$force = false;
+
+		// $cli->shout();
+		if (!$this->getBelongToComponent()->getFirstMaintainer()->getUsername() && $this->getFirstMaintainer()->getUsername()) {
+			$this->getBelongToComponent()->setFirstMaintainer($this->getFirstMaintainer());
+		}
 
 		if (($this->getFirstMaintainer()->getUsername() == ''
 				&& $this->getBelongToComponent()->getFirstMaintainer()->getUsername() != '')

@@ -6,16 +6,19 @@ $ composer install
 ```
 
 Use the commandline php to run the script:
-````
+
+```
 Usage: run.php [-c cmd, --cmd cmd] [-p path, --path path (default: /var/www/ilias)]
 
 Optional Arguments:
 	-p path, --path path (default: /var/www/ilias)
 		base Path of the ILIAS-Installation
-````
+```
+
 You need PHP7 to run this script.
 
 The following commands are available:
+
 ```
 php run.php -c maintainers # Lists all already registered maintainers
 php run.php -c components # Lists alls already registered components
@@ -26,6 +29,7 @@ php run.php -c usage # Lists all available commands
 ### What does it?
 This reads/generates a maintenance.json in every subdirectory of /Services, /Modules and /src of the ILIAS. 
 Those files are structures like this:
+
 ```
 {
     "maintenance_model": "Classic", // Classic or Service 
@@ -44,6 +48,7 @@ Those files are structures like this:
     ]
 }
 ```
+
 After running the files in this repo
 - maintainers.json  
 - components.json  
@@ -58,6 +63,7 @@ We accepted to use this script to identify maintained and unmaintained code in I
 
 **Step 1:**
 Checkout the DeveloperTool-Repository within your local ILIAS-Repo:
+
 ```
 $ cd Customizing/global
 $ git clone https://github.com/ILIAS-eLearning/DeveloperTools tools
@@ -65,6 +71,7 @@ $ git clone https://github.com/ILIAS-eLearning/DeveloperTools tools
 
 **Step 2:**
 Install the dependencies:
+
 ```
 $ cd tools/maintainers
 $ composer install
@@ -73,6 +80,7 @@ $ sudo apt-get install php7.0-mbstring
 
 **Step 3:**
 Check if your maintainer-account is already registered:
+
 ```
 $ php run.php -c maintainers
 Available Maintainers:
@@ -91,13 +99,16 @@ Available Maintainers:
 
 If not, check the file maintainers.json. Is there already an entry with your ILIAS.de-Account and User-ID? 
 Add a line
+
 ```
 	"username": "username(123)",
 ```
+
 if missing.
 
 **Step 4:**
 Check if your component already are registered:
+
 ```
 $ php run.php -c components
 
@@ -116,6 +127,7 @@ Available Components:
 ```
 
 If not, check the components.json. Are all your components listed there? Add one, e.g.
+
 ```
 "RBAC": {
         "directories": [],
@@ -128,6 +140,7 @@ If not, check the components.json. Are all your components listed there? Add one
         "coordinators": []
     },
 ```
+
 if your component is missing. You just have to fill out "Component Name", "name" and 
 "first_maintainer". The "modell" is "Classic" for nearly everything. "directories" will be 
 filled out automatically.
@@ -153,14 +166,17 @@ vi /Services/AccessControl/maintenance.json
     "used_in_components": [] # If this directory is used in several components, list them (with the exact name).
 }
 ```
+
 **Step 6:**
 Run the file-generation
+
 ```
 $ php run.php -c generate
 ILIAS has 29 maintained and 148 unmaintained Directories in 43 components
 Writing MD-File
 
 ```
+
 The files 
 - maintainers.json
 - components.json

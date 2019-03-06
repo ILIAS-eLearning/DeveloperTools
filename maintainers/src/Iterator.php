@@ -80,7 +80,7 @@ class Iterator {
 				$cli->out('Renaming');
 				$Directory->renameComponent($from, $to);
 			}
-			$Directory->inheritMaintainersFromComponent();
+			$Directory->inheritMaintainersFromComponent($cli);
 			if ($Directory->isMaintained()) {
 				$this->collector->addMaintained($Directory);
 			} else {

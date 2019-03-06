@@ -80,7 +80,7 @@ class App {
 
 			case self::CMD_GENERATE:
 				$MaintenanceReader = new Iterator($this->cli->arguments->get('path'));
-				$MaintenanceReader->runFor(array( 'Services', 'Modules', 'src' ));
+				$MaintenanceReader->runFor(array( 'Services', 'Modules', 'src' ), $this->cli);
 				$this->cli->shout('ILIAS has ' . $MaintenanceReader->getCollector()
 				                                                   ->howManyMaintained()
 				                  . ' maintained and ' . $MaintenanceReader->getCollector()

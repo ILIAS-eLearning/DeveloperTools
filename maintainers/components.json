@@ -246,8 +246,8 @@
         "name": "Shibboleth Authentication",
         "first_maintainer": "fschmid(21087)",
         "second_maintainer": "",
-        "tester": "",
-        "testcase_writer": "",
+        "tester": "iLUB Universität Bern",
+        "testcase_writer": "iLUB Universität Bern",
         "model": "Classic",
         "coordinators": [
             ""
@@ -301,7 +301,7 @@
         "first_maintainer": "mjansen(8784)",
         "second_maintainer": "",
         "tester": "abaulig1(44386)",
-        "testcase_writer": "",
+        "testcase_writer": "suittenpointner(3458)",
         "model": "Classic",
         "coordinators": [
             ""
@@ -557,13 +557,13 @@
         "model": "Classic",
         "coordinators": []
     },
-    "MyStaff": {
+    "Staff": {
         "directories": [
             "Services/MyStaff"
         ],
-        "name": "MyStaff",
+        "name": "Staff",
         "first_maintainer": "mstuder(8473)",
-        "second_maintainer": "",
+        "second_maintainer": "rklees(34047)",
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
@@ -635,7 +635,7 @@
         "first_maintainer": "smeyer(191)",
         "second_maintainer": "",
         "tester": "Future Learning",
-        "testcase_writer": "",
+        "testcase_writer": "FH Aachen",
         "model": "Classic",
         "coordinators": [
             ""
@@ -1032,8 +1032,8 @@
         "name": "Learning Sequence",
         "first_maintainer": "rklees(34047)",
         "second_maintainer": "",
-        "tester": "",
-        "testcase_writer": "",
+        "tester": "mglaubitz(28309)",
+        "testcase_writer": "scarlino(56074)",
         "model": "Classic",
         "coordinators": [
             ""
@@ -1326,7 +1326,7 @@
         "first_maintainer": "akill(149)",
         "second_maintainer": "",
         "tester": "PaBer(33766)",
-        "testcase_writer": "",
+        "testcase_writer": "KlausVorkauf(5890)",
         "model": "Classic",
         "coordinators": [
             ""
@@ -1341,7 +1341,7 @@
         "name": "My Workspace",
         "first_maintainer": "akill(149)",
         "second_maintainer": "",
-        "tester": "",
+        "tester": "KlausVorkauf(5890)",
         "testcase_writer": "",
         "model": "Classic",
         "coordinators": [
@@ -1374,7 +1374,7 @@
         ],
         "name": "Survey",
         "first_maintainer": "akill(149)",
-        "second_maintainer": "",
+        "second_maintainer": "Xus(50418)",
         "tester": "ILIAS open source e-Learning e.V.",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
@@ -1448,7 +1448,7 @@
         "first_maintainer": "smeyer(191)",
         "second_maintainer": "bheyser(14300)",
         "tester": "",
-        "testcase_writer": "",
+        "testcase_writer": "FH Aachen",
         "model": "Classic",
         "coordinators": [
             ""

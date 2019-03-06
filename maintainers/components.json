@@ -118,10 +118,24 @@
             "Modules/Cloud"
         ],
         "name": "Cloud Object",
-        "first_maintainer": "fschmid(21087)",
+        "first_maintainer": "ttruffer(42894)",
         "second_maintainer": "amstutz(26468)",
         "tester": "fschmid(21087)",
         "testcase_writer": "ttruffer(42894)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
+    "ContentPage": {
+        "directories": [
+            "Modules/ContentPage"
+        ],
+        "name": "ContentPage",
+        "first_maintainer": "mjansen(8784)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
         "model": "Classic",
         "coordinators": [
             ""
@@ -272,7 +286,7 @@
             "Services/Component"
         ],
         "name": "Plugin Slots",
-        "first_maintainer": "fschmid(21087)",
+        "first_maintainer": "mstuder(8473)",
         "second_maintainer": "rklees(34047)",
         "tester": "Future Learning",
         "testcase_writer": "",
@@ -548,7 +562,7 @@
             "Services/MyStaff"
         ],
         "name": "MyStaff",
-        "first_maintainer": "fschmid(21087)",
+        "first_maintainer": "mstuder(8473)",
         "second_maintainer": "",
         "tester": "",
         "testcase_writer": "",
@@ -855,7 +869,7 @@
             "Modules/OrgUnit"
         ],
         "name": "Organisational Units",
-        "first_maintainer": "fschmid(21087)",
+        "first_maintainer": "mstuder(8473)",
         "second_maintainer": "bheyser(14300)",
         "tester": "wischniak(21896)",
         "testcase_writer": "wischniak(21896)",
@@ -1229,7 +1243,7 @@
             "Modules/DataCollection"
         ],
         "name": "Data Collection",
-        "first_maintainer": "fschmid(21087)",
+        "first_maintainer": "ttruffer(42894)",
         "second_maintainer": "",
         "tester": "kim.herms(28720)",
         "testcase_writer": "mstuder(8473)",

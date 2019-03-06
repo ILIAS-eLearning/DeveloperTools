@@ -102,6 +102,15 @@ class Directory extends JsonSerializable {
 
 		$force = false;
 
+
+		if($this->getBelongToComponent()->getFirstMaintainer()->getUsername() && $this->getBelongToComponent()->getFirstMaintainer()->getUsername() != $this->getFirstMaintainer()->getUsername()) {
+			$this->setFirstMaintainer($this->getBelongToComponent()->getFirstMaintainer());
+		}
+
+		if($this->getBelongToComponent()->getSecondMaintainer()->getUsername() && $this->getBelongToComponent()->getSecondMaintainer()->getUsername() != $this->getSecondMaintainer()->getUsername()) {
+			$this->setSecondMaintainer($this->getBelongToComponent()->getSecondMaintainer());
+		}
+
 		if (!$this->getBelongToComponent()->getFirstMaintainer()->getUsername() && $this->getFirstMaintainer()->getUsername() && !$force) {
 			$this->getBelongToComponent()->setFirstMaintainer($this->getFirstMaintainer());
 		}

@@ -109,7 +109,9 @@
         "tester": "wolfganghuebsch(18455)",
         "testcase_writer": "e.coroian(37215)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Cloud Object": {
         "directories": [
@@ -121,7 +123,9 @@
         "tester": "fschmid(21087)",
         "testcase_writer": "ttruffer(42894)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Exercise": {
         "directories": [
@@ -133,7 +137,9 @@
         "tester": "miriamwegener(23051)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "IndividualAssessment": {
         "directories": [
@@ -145,7 +151,9 @@
         "tester": "kunkel(115)",
         "testcase_writer": "rklees(34047)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Media Pool": {
         "directories": [
@@ -157,7 +165,9 @@
         "tester": "kunkel(115)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Session": {
         "directories": [
@@ -169,7 +179,9 @@
         "tester": "iLUB Universität Bern",
         "testcase_writer": "iLUB Universität Bern",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Weblink": {
         "directories": [
@@ -181,7 +193,9 @@
         "tester": "nadine.bauser(34662)",
         "testcase_writer": "nadine.bauser(34662)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "RBAC": {
         "directories": [
@@ -193,7 +207,9 @@
         "tester": "kunkel(115)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "ActiveRecord": {
         "directories": [
@@ -205,7 +221,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Shibboleth Authentication": {
         "directories": [
@@ -217,7 +235,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Who is online?": {
         "directories": [
@@ -229,7 +249,9 @@
         "tester": "amersch(15114)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Bookmarks": {
         "directories": [
@@ -241,7 +263,9 @@
         "tester": "miriamhoelscher(25370)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Plugin Slots": {
         "directories": [
@@ -265,7 +289,9 @@
         "tester": "abaulig1(44386)",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Cron Service": {
         "directories": [
@@ -277,7 +303,9 @@
         "tester": "kunkel(115)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Database": {
         "directories": [
@@ -289,7 +317,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Export": {
         "directories": [
@@ -301,7 +331,9 @@
         "tester": "Fabian(27631)",
         "testcase_writer": "Fabian(27631)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Excel": {
         "directories": [
@@ -397,7 +429,9 @@
         "tester": "atoedt(3139)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Info Page": {
         "directories": [
@@ -409,7 +443,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "LTI": {
         "directories": [
@@ -421,7 +457,9 @@
         "tester": "atoedt(3139)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Learning History": {
         "directories": [
@@ -433,7 +471,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Mail": {
         "directories": [
@@ -445,7 +485,23 @@
         "tester": "amersch(15114)",
         "testcase_writer": "amersch(15114)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
+    },
+    "MainMenu": {
+        "directories": [
+            "Services/MainMenu"
+        ],
+        "name": "MainMenu",
+        "first_maintainer": "fschmid(21087)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
     },
     "Maps": {
         "directories": [
@@ -457,7 +513,9 @@
         "tester": "miriamhoelscher(25370)",
         "testcase_writer": "rklees(34047)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "MathJax": {
         "directories": [
@@ -469,7 +527,9 @@
         "tester": "claudio.fischer(41113)",
         "testcase_writer": "fneumann(1560)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            "fneumann(1560)"
+        ]
     },
     "PDFGeneration": {
         "directories": [
@@ -493,7 +553,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Notes and Comments": {
         "directories": [
@@ -501,11 +563,13 @@
         ],
         "name": "Notes and Comments",
         "first_maintainer": "akill(149)",
-        "second_maintainer": "fschmid(21087)",
+        "second_maintainer": "",
         "tester": "skaiser(17260)",
         "testcase_writer": "skaiser(17260)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Personal Desktop": {
         "directories": [
@@ -517,7 +581,9 @@
         "tester": "",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Rating": {
         "directories": [
@@ -529,7 +595,9 @@
         "tester": "Fabian(27631)",
         "testcase_writer": "Fabian(27631)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "SAML": {
         "directories": [
@@ -541,7 +609,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Search": {
         "directories": [
@@ -553,7 +623,9 @@
         "tester": "Future Learning",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Competence Management": {
         "directories": [
@@ -565,7 +637,9 @@
         "tester": "wolfganghuebsch(18455)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "CSS / Templates": {
         "directories": [
@@ -577,7 +651,9 @@
         "tester": "fschmid(21087)",
         "testcase_writer": "Fabian(27631)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "System Check": {
         "directories": [
@@ -589,7 +665,9 @@
         "tester": "",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Tagging": {
         "directories": [
@@ -601,7 +679,9 @@
         "tester": "skaiser(17260)",
         "testcase_writer": "skaiser(17260)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Taxonomy": {
         "directories": [
@@ -613,7 +693,9 @@
         "tester": "Tested separately in each module that supports taxonomies",
         "testcase_writer": "Tested separately in each module that supports taxonomies",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Statistics and Learning Progress": {
         "directories": [
@@ -625,7 +707,9 @@
         "tester": "suittenpointner(3458)",
         "testcase_writer": "bromberger(198)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Booking Manager": {
         "directories": [
@@ -661,7 +745,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Webservices": {
         "directories": [
@@ -673,7 +759,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Workflow Engine": {
         "directories": [
@@ -685,7 +773,9 @@
         "tester": "richtera(41247)",
         "testcase_writer": "mbecker(27266)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "HTTP-Request": {
         "directories": [
@@ -710,7 +800,8 @@
         "testcase_writer": "",
         "model": "Service",
         "coordinators": [
-            "amstutz(26468)"
+            "amstutz(26468)",
+            "rklees(34047)"
         ]
     },
     "Course Management": {
@@ -724,7 +815,9 @@
         "tester": "iLUB Universität Bern",
         "testcase_writer": "iLUB Universität Bern",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Group": {
         "directories": [
@@ -737,7 +830,9 @@
         "tester": "iLUB Universität Bern",
         "testcase_writer": "iLUB Universität Bern",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "ItemGroup": {
         "directories": [
@@ -750,7 +845,9 @@
         "tester": "berggold(22199)",
         "testcase_writer": "berggold(22199)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Organisational Units": {
         "directories": [
@@ -763,7 +860,9 @@
         "tester": "wischniak(21896)",
         "testcase_writer": "wischniak(21896)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Study Programme": {
         "directories": [
@@ -776,7 +875,9 @@
         "tester": "mstuder(8473)",
         "testcase_writer": "rklees(34047)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "GlobalCache": {
         "directories": [
@@ -789,7 +890,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "BackgroundTasks": {
         "directories": [
@@ -802,7 +905,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Badges": {
         "directories": [
@@ -815,7 +920,9 @@
         "tester": "Thomas.schroeder(38330)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "ILIAS Page Editor": {
         "directories": [
@@ -828,7 +935,9 @@
         "tester": "FH Aachen",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "News": {
         "directories": [
@@ -841,7 +950,9 @@
         "tester": "Thomas.schroeder(38330)",
         "testcase_writer": "Thomas.schroeder(38330)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Web Feed": {
         "directories": [
@@ -854,7 +965,9 @@
         "tester": "kunkel(115)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "ilUtil": {
         "directories": [
@@ -880,6 +993,21 @@
         "tester": "kunkel(115)",
         "testcase_writer": "",
         "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
+    "GlobalScreen": {
+        "directories": [
+            "Services/GlobalScreen",
+            "src/GlobalScreen"
+        ],
+        "name": "GlobalScreen",
+        "first_maintainer": "fschmid(21087)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
         "coordinators": []
     },
     "Learning Sequence": {
@@ -893,7 +1021,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "General Kiosk-Mode": {
         "directories": [
@@ -906,7 +1036,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Glossary": {
         "directories": [
@@ -919,7 +1051,9 @@
         "tester": "atoedt(3139)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Learning Module ILIAS": {
         "directories": [
@@ -932,7 +1066,9 @@
         "tester": "Balliel(18365)",
         "testcase_writer": "Balliel(18365)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Wiki": {
         "directories": [
@@ -945,7 +1081,9 @@
         "tester": "abaulig1(44386)",
         "testcase_writer": "abaulig1(44386)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Media Objects": {
         "directories": [
@@ -958,7 +1096,9 @@
         "tester": "kunkel(115)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "SOAP": {
         "directories": [
@@ -971,7 +1111,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "User Service": {
         "directories": [
@@ -984,7 +1126,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Learning Module HTML": {
         "directories": [
@@ -997,7 +1141,9 @@
         "tester": "suittenpointner(3458)",
         "testcase_writer": "suittenpointner(3458)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "MediaCast": {
         "directories": [
@@ -1006,11 +1152,13 @@
         ],
         "name": "MediaCast",
         "first_maintainer": "akill(149)",
-        "second_maintainer": "fschmid(21087)",
+        "second_maintainer": "",
         "tester": "berggold(22199)",
         "testcase_writer": "berggold(22199)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Poll": {
         "directories": [
@@ -1023,7 +1171,9 @@
         "tester": "Future Learning",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Portfolio": {
         "directories": [
@@ -1036,7 +1186,9 @@
         "tester": "KlausVorkauf and Oliver Samoila (Portfolio Template)",
         "testcase_writer": "KlausVorkauf and Oliver Samoila (Portfolio Template)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Metadata": {
         "directories": [
@@ -1050,7 +1202,9 @@
         "tester": "daniela.weber(40672)",
         "testcase_writer": "daniela.weber(40672)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Web Access Checker": {
         "directories": [
@@ -1064,7 +1218,9 @@
         "tester": "berggold(22199)",
         "testcase_writer": "ttruffer(42894)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Data Collection": {
         "directories": [
@@ -1078,7 +1234,9 @@
         "tester": "kim.herms(28720)",
         "testcase_writer": "mstuder(8473)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Administration": {
         "directories": [
@@ -1092,7 +1250,9 @@
         "tester": "kunkel(115)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Calendar": {
         "directories": [
@@ -1106,7 +1266,9 @@
         "tester": "iLUB Universität Bern",
         "testcase_writer": "iLUB Universität Bern",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Certificate": {
         "directories": [
@@ -1120,7 +1282,9 @@
         "tester": "christian.hueser(41129)",
         "testcase_writer": "christian.hueser(41129)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Forum": {
         "directories": [
@@ -1134,7 +1298,9 @@
         "tester": "e.coroian(37215)",
         "testcase_writer": "FH Aachen",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Blog": {
         "directories": [
@@ -1148,7 +1314,9 @@
         "tester": "PaBer(33766)",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "My Workspace": {
         "directories": [
@@ -1162,7 +1330,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Bibliographic List Item": {
         "directories": [
@@ -1177,7 +1347,9 @@
         "tester": "miriamhoelscher(25370)",
         "testcase_writer": "mstuder(8473)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Survey": {
         "directories": [
@@ -1192,7 +1364,9 @@
         "tester": "ILIAS open source e-Learning e.V.",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Learning Module SCORM": {
         "directories": [
@@ -1207,7 +1381,9 @@
         "tester": "suittenpointner(3458)",
         "testcase_writer": "suittenpointner(3458)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Chat": {
         "directories": [
@@ -1222,7 +1398,9 @@
         "tester": "elenak(49160)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Test & Assessment": {
         "directories": [
@@ -1238,7 +1416,9 @@
         "tester": "Claudia Dehling, SIG EA, et al.",
         "testcase_writer": "Stefanie Zepf and SIG EA",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Login, Auth & Registration": {
         "directories": [
@@ -1256,7 +1436,9 @@
         "tester": "",
         "testcase_writer": "",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "Category and Repository": {
         "directories": [
@@ -1274,10 +1456,13 @@
         "tester": "miriamhoelscher(25370)",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "File": {
         "directories": [
+            "Services/BackgroundTasks",
             "Services/FileDelivery",
             "Services/FileSystem",
             "Services/FileUpload",
@@ -1292,7 +1477,9 @@
         "tester": "daniwe4(54500)",
         "testcase_writer": "daniwe4(54500)",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     },
     "ECS Interface": {
         "directories": [
@@ -1312,6 +1499,8 @@
         "tester": "bogen(13815)",
         "testcase_writer": "Christian Bogen and Kristina Haase",
         "model": "Classic",
-        "coordinators": []
+        "coordinators": [
+            ""
+        ]
     }
 }

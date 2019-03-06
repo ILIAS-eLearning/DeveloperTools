@@ -102,9 +102,14 @@ class Directory extends JsonSerializable {
 
 		$force = false;
 
-		// $cli->shout();
-		if (!$this->getBelongToComponent()->getFirstMaintainer()->getUsername() && $this->getFirstMaintainer()->getUsername()) {
+		if (!$this->getBelongToComponent()->getFirstMaintainer()->getUsername() && $this->getFirstMaintainer()->getUsername() && !$force) {
 			$this->getBelongToComponent()->setFirstMaintainer($this->getFirstMaintainer());
+		}
+		if (is_array($this->getBelongToComponent()->getCoordinators()) && is_array($this->getCoordinator())
+			&& count($this->getBelongToComponent()->getCoordinators()) < count($this->getCoordinator())
+			&& !$force
+		) {
+			$this->getBelongToComponent()->setCoordinators($this->getCoordinator());
 		}
 
 		if (($this->getFirstMaintainer()->getUsername() == ''
@@ -134,6 +139,13 @@ class Directory extends JsonSerializable {
 
 		) {
 			$this->setTestcaseWriter($this->getBelongToComponent()->getTestcaseWriter());
+		}
+
+		if ((is_array($this->getBelongToComponent()->getCoordinators()) && is_array($this->getCoordinator())
+				&& count($this->getBelongToComponent()->getCoordinators()) > count($this->getCoordinator()))
+			|| $force
+		) {
+			$this->setCoordinator($this->getBelongToComponent()->getCoordinators());
 		}
 	}
 

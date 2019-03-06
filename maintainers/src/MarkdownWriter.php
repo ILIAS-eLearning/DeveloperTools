@@ -43,7 +43,7 @@ class MarkdownWriter {
 
 	/**
 	 * @param \League\Flysystem\Filesystem $filesystem
-	 * @param string $path_to_file
+	 * @param string                       $path_to_file
 	 */
 	public function writeMD(Filesystem $filesystem, $path_to_file = 'docs/documentation/maintenance.md') {
 		if (!$filesystem->has($path_to_file)) {
@@ -63,10 +63,10 @@ class MarkdownWriter {
 		$seperator = "<!-- REMOVE -->";
 		$md = strstr($filesystem->read($path_to_file), $seperator, true) . $seperator . "\n";
 
-//		$components = $this->getCollector()->getComponents();
-		$components =Component::getRegistredInstances();
+		//		$components = $this->getCollector()->getComponents();
+		$components = Component::getRegistredInstances();
 		ksort($components);
-		
+
 		foreach ($components as $component) {
 			$component->populate();
 			$name = $component->getName();
@@ -78,7 +78,7 @@ class MarkdownWriter {
 			}
 
 			if (!$component->getFirstMaintainer()->getUsername()
-			    && !$component->getSecondMaintainer()->getUsername()
+				&& !$component->getSecondMaintainer()->getUsername()
 			) {
 				continue;
 			}
@@ -95,44 +95,36 @@ class MarkdownWriter {
 			$md .= "\n";
 		}
 
-		$md .= "\nComponents in the Coordinator Model [Coordinator Model](maintenance-coordinator.md):\n";
+		$md .= "\nComponents in the Coordinator Model [Coordinator Model](maintenance-coordinator.md):\n\n";
 
 		foreach ($components as $component) {
 			$component->populate();
 			$name = $component->getName();
 			if ($name == 'All' || $name == 'None') {
-				continue;
+				// continue;
 			}
 			if ($component->getModel() == Directory::CLASSIC) {
 				continue;
 			}
 			$md .= "* **{$name}**\n";
 			$md .= "\t* Coordinators: ";
+			$coordinator_strings = [];
 			foreach ($component->getCoordinators() as $coordinator) {
-				$md .= $coordinator->getLinkedProfile() . ', ';
+				$coordinator_strings[] = $coordinator->getLinkedProfile();
 			}
+			$md .= implode(", ", $coordinator_strings);
 			$md .= "\n";
 			$md .= "\t* Used in Directories: ";
+			$used_strings = [];
 			foreach ($component->getDirectories() as $directory) {
-				$md .= "{$directory->getPath()}, ";
+				$used_strings[] = $directory->getPath();
 			}
+			$md .= implode(", ", $used_strings);
 
 			$md .= "\n";
 		}
 
-//		$md .= "\n\nThe following directories are currently maintained unter the Classic-Maintenace-Model:\n";
-//		/**
-//		 * @var $coordinator \ILIAS\Tools\Maintainers\Maintainer
-//		 */
-//		$directories = $this->getCollector()->getByModell(Directory::CLASSIC);
-//		ksort($directories);
-//		foreach ($directories as $directory) {
-//			$directory->populate();
-//
-//			$md .= "* {$directory->getPath()}\n (1st Maintainer: {$directory->getFirstMaintainer()->getLinkedProfile()})\n";
-//		}
-
-		$md .= "\n\nThe following directories are currently maintained under the [Coordinator Model](maintenance-coordinator.md):\n";
+		$md .= "\n\nThe following directories are currently maintained under the [Coordinator Model](maintenance-coordinator.md):\n\n";
 		/**
 		 * @var $coordinator \ILIAS\Tools\Maintainers\Maintainer
 		 */
@@ -144,7 +136,7 @@ class MarkdownWriter {
 			$md .= "* {$directory->getPath()}\n";
 		}
 
-		$md .= "\n\nThe following directories are currently unmaintained:\n";
+		$md .= "\n\nThe following directories are currently unmaintained:\n\n";
 
 		$directories2 = $this->getCollector()->getUnmaintained();
 		sort($directories2);

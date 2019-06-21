@@ -1,0 +1,25 @@
+if [ -x libs/composer/vendor/bin/php-cs-fixer ]; then
+    echo "PHP CS Fixer is installed begin to check PHP files"
+    CONFIGURATION_FILE="./CI/PHP-CS-Fixer/code-format.php_cs"
+    if [ -f $CONFIGURATION_FILE]; then
+        echo "The configuration file is not found under ${CONFIGURATION_FILE}"
+    fi
+    CHANGED_FILES=$(git diff --cached --name-only --diff-filter=ACM -- '*.php')
+    return_code=0
+    result=""
+    for FILE in $CHANGED_FILES
+    do
+        echo "Fix file: ${FILE}"
+        partial_result=$(libs/composer/vendor/bin/php-cs-fixer fix --stop-on-violation --using-cache=no --diff --config=$CONFIGURATION_FILE $FILE)
+        partial_return_code=$?
+        if [ $partial_return_code -ne 0 ]; then
+           return_code=$partial_return_code
+           exit 1
+        fi
+    done
+    echo "End of fixing PHP files"
+else
+    echo "Couldn't find 'libs/composer/vendor/bin/php-cs-fixer'. Make sure it is installed, for more information check the local '/docs/coding-style.md'"
+    exit 1
+fi
+echo "Could Style is OK."

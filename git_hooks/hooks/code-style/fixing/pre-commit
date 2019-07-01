@@ -1,3 +1,4 @@
+#!/bin/sh
 if [ -x libs/composer/vendor/bin/php-cs-fixer ]; then
     echo "PHP CS Fixer is installed begin to check PHP files"
     CONFIGURATION_FILE="./CI/PHP-CS-Fixer/code-format.php_cs"

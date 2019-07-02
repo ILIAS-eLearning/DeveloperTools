@@ -23,4 +23,4 @@ else
     echo "Couldn't find 'libs/composer/vendor/bin/php-cs-fixer'. Make sure it is installed, for more information check the local '/docs/coding-style.md'"
     exit 1
 fi
-echo "Could Style is OK."
+echo "Code Style is OK."

@@ -697,20 +697,6 @@
             ""
         ]
     },
-    "Taxonomy": {
-        "directories": [
-            "Services/Taxonomy"
-        ],
-        "name": "Taxonomy",
-        "first_maintainer": "akill(149)",
-        "second_maintainer": "",
-        "tester": "Tested separately in each module that supports taxonomies",
-        "testcase_writer": "Tested separately in each module that supports taxonomies",
-        "model": "Classic",
-        "coordinators": [
-            ""
-        ]
-    },
     "Statistics and Learning Progress": {
         "directories": [
             "Services/Tracking"
@@ -816,6 +802,46 @@
         "coordinators": [
             "amstutz(26468)",
             "rklees(34047)"
+        ]
+    },
+    "Tasks": {
+        "directories": {
+            "Services/Tasks": {}
+        },
+        "name": "Tasks",
+        "first_maintainer": {
+            "username": "",
+            "user_id": 0
+        },
+        "second_maintainer": {
+            "username": "",
+            "user_id": 0
+        },
+        "tester": {
+            "username": "",
+            "user_id": 0
+        },
+        "testcase_writer": {
+            "username": "",
+            "user_id": 0
+        },
+        "model": "Classic",
+        "coordinators": [
+            {}
+        ]
+    },
+    "Taxonomy": {
+        "directories": [
+            "Services/Taxonomy"
+        ],
+        "name": "Taxonomy",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "Tested separately in each module that supports taxonomies",
+        "testcase_writer": "Tested separately in each module that supports taxonomies",
+        "model": "Classic",
+        "coordinators": [
+            ""
         ]
     },
     "Course Management": {

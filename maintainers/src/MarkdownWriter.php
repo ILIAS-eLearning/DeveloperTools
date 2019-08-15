@@ -45,7 +45,7 @@ class MarkdownWriter {
 	 * @param \League\Flysystem\Filesystem $filesystem
 	 * @param string                       $path_to_file
 	 */
-	public function writeMD(Filesystem $filesystem, $path_to_file = 'docs/documentation/maintenance.md') {
+	public function writeMD(Filesystem $filesystem, $path_to_file = 'docs/development/maintenance.md') {
 		if (!$filesystem->has($path_to_file)) {
 			$filesystem->write($path_to_file, '');
 		}

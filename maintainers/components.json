@@ -267,6 +267,20 @@
             ""
         ]
     },
+    "BackgroundTasks": {
+        "directories": [
+            "Services/BackgroundTasks"
+        ],
+        "name": "BackgroundTasks",
+        "first_maintainer": "fschmid(21087)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
     "Bookmarks": {
         "directories": [
             "Services/Bookmarks"
@@ -697,6 +711,34 @@
             ""
         ]
     },
+    "Tasks": {
+        "directories": [
+            "Services/Tasks"
+        ],
+        "name": "Tasks",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
+    "Taxonomy": {
+        "directories": [
+            "Services/Taxonomy"
+        ],
+        "name": "Taxonomy",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "Tested separately in each module that supports taxonomies",
+        "testcase_writer": "Tested separately in each module that supports taxonomies",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
     "Statistics and Learning Progress": {
         "directories": [
             "Services/Tracking"
@@ -804,46 +846,6 @@
             "rklees(34047)"
         ]
     },
-    "Tasks": {
-        "directories": {
-            "Services/Tasks": {}
-        },
-        "name": "Tasks",
-        "first_maintainer": {
-            "username": "",
-            "user_id": 0
-        },
-        "second_maintainer": {
-            "username": "",
-            "user_id": 0
-        },
-        "tester": {
-            "username": "",
-            "user_id": 0
-        },
-        "testcase_writer": {
-            "username": "",
-            "user_id": 0
-        },
-        "model": "Classic",
-        "coordinators": [
-            {}
-        ]
-    },
-    "Taxonomy": {
-        "directories": [
-            "Services/Taxonomy"
-        ],
-        "name": "Taxonomy",
-        "first_maintainer": "akill(149)",
-        "second_maintainer": "",
-        "tester": "Tested separately in each module that supports taxonomies",
-        "testcase_writer": "Tested separately in each module that supports taxonomies",
-        "model": "Classic",
-        "coordinators": [
-            ""
-        ]
-    },
     "Course Management": {
         "directories": [
             "Modules/Course",
@@ -925,21 +927,6 @@
             "Services/GlobalCache"
         ],
         "name": "GlobalCache",
-        "first_maintainer": "fschmid(21087)",
-        "second_maintainer": "",
-        "tester": "",
-        "testcase_writer": "",
-        "model": "Classic",
-        "coordinators": [
-            ""
-        ]
-    },
-    "BackgroundTasks": {
-        "directories": [
-            "Services/BackgroundTask",
-            "Services/BackgroundTasks"
-        ],
-        "name": "BackgroundTasks",
         "first_maintainer": "fschmid(21087)",
         "second_maintainer": "",
         "tester": "",

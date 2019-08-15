@@ -831,6 +831,21 @@
         "model": "Classic",
         "coordinators": []
     },
+    "Refinery": {
+        "directories": [
+            "src/Refinery"
+        ],
+        "name": "Refinery",
+        "first_maintainer": "",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Service",
+        "coordinators": [
+            "mjansen(8784)",
+            "rklees(34047)"
+        ]
+    },
     "UI-Service": {
         "directories": [
             "src/UI"

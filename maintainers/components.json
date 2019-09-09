@@ -19,6 +19,18 @@
         "model": "Classic",
         "coordinators": []
     },
+    "Like": {
+        "directories": [],
+        "name": "Like",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "smeyer(191)",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
     "Logging": {
         "directories": [],
         "name": "Logging",
@@ -58,6 +70,19 @@
         "testcase_writer": "",
         "model": "Classic",
         "coordinators": []
+    },
+    "Refinery": {
+        "directories": [],
+        "name": "Refinery",
+        "first_maintainer": "",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Service",
+        "coordinators": [
+            "mjansen(8784)",
+            "rklees(34047)"
+        ]
     },
     "SCORM Offline Player": {
         "directories": [],
@@ -452,8 +477,8 @@
             "Services/Help"
         ],
         "name": "Online Help",
-        "first_maintainer": "smeyer(191)",
-        "second_maintainer": "akill(149)",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "smeyer(191)",
         "tester": "atoedt(3139)",
         "testcase_writer": "atoedt(3139)",
         "model": "Classic",
@@ -831,21 +856,6 @@
         "model": "Classic",
         "coordinators": []
     },
-    "Refinery": {
-        "directories": [
-            "src/Refinery"
-        ],
-        "name": "Refinery",
-        "first_maintainer": "",
-        "second_maintainer": "",
-        "tester": "",
-        "testcase_writer": "",
-        "model": "Service",
-        "coordinators": [
-            "mjansen(8784)",
-            "rklees(34047)"
-        ]
-    },
     "UI-Service": {
         "directories": [
             "src/UI"
@@ -976,21 +986,6 @@
         "second_maintainer": "",
         "tester": "FH Aachen",
         "testcase_writer": "atoedt(3139)",
-        "model": "Classic",
-        "coordinators": [
-            ""
-        ]
-    },
-    "News": {
-        "directories": [
-            "Services/Cache",
-            "Services/News"
-        ],
-        "name": "News",
-        "first_maintainer": "akill(149)",
-        "second_maintainer": "",
-        "tester": "Thomas.schroeder(38330)",
-        "testcase_writer": "Thomas.schroeder(38330)",
         "model": "Classic",
         "coordinators": [
             ""
@@ -1312,6 +1307,22 @@
             ""
         ]
     },
+    "News": {
+        "directories": [
+            "Services/Cache",
+            "Services/Like",
+            "Services/News"
+        ],
+        "name": "News",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "Thomas.schroeder(38330)",
+        "testcase_writer": "Thomas.schroeder(38330)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
     "Certificate": {
         "directories": [
             "Services/Certificate",
@@ -1475,7 +1486,7 @@
         "name": "Login, Auth & Registration",
         "first_maintainer": "smeyer(191)",
         "second_maintainer": "bheyser(14300)",
-        "tester": "",
+        "tester": "vimotion(25105)",
         "testcase_writer": "FH Aachen",
         "model": "Classic",
         "coordinators": [

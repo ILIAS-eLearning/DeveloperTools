@@ -1,4 +1,16 @@
 {
+    "Bookmarks": {
+        "directories": [],
+        "name": "Bookmarks",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "miriamhoelscher(25370)",
+        "testcase_writer": "kunkel(115)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
     "Data": {
         "directories": [],
         "name": "Data",
@@ -50,6 +62,18 @@
         "testcase_writer": "",
         "model": "Classic",
         "coordinators": []
+    },
+    "Personal Desktop": {
+        "directories": [],
+        "name": "Personal Desktop",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "kunkel(115)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
     },
     "Personal Profile": {
         "directories": [],
@@ -152,6 +176,20 @@
             ""
         ]
     },
+    "cmi5/xAPI Object": {
+        "directories": [
+            "Modules/CmiXapi"
+        ],
+        "name": "cmi5/xAPI Object",
+        "first_maintainer": "ukohnle(21855)",
+        "second_maintainer": "bheyser(14300)",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
     "ContentPage": {
         "directories": [
             "Modules/ContentPage"
@@ -189,6 +227,20 @@
         "second_maintainer": "dkloepfer(42712)",
         "tester": "kunkel(115)",
         "testcase_writer": "rklees(34047)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
+    "LTI Consumer": {
+        "directories": [
+            "Modules/LTIConsumer"
+        ],
+        "name": "LTI Consumer",
+        "first_maintainer": "ukohnle(21855)",
+        "second_maintainer": "bheyser(14300)",
+        "tester": "",
+        "testcase_writer": "",
         "model": "Classic",
         "coordinators": [
             ""
@@ -264,6 +316,42 @@
             ""
         ]
     },
+    "LearningModule": {
+        "directories": [
+            "Services/AssessmentQuestion"
+        ],
+        "name": "LearningModule",
+        "first_maintainer": "",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": []
+    },
+    "Test": {
+        "directories": [
+            "Services/AssessmentQuestion"
+        ],
+        "name": "Test",
+        "first_maintainer": "",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": []
+    },
+    "TestQuestionPool": {
+        "directories": [
+            "Services/AssessmentQuestion"
+        ],
+        "name": "TestQuestionPool",
+        "first_maintainer": "",
+        "second_maintainer": "",
+        "tester": "",
+        "testcase_writer": "",
+        "model": "Classic",
+        "coordinators": []
+    },
     "Shibboleth Authentication": {
         "directories": [
             "Services/AuthShibboleth"
@@ -306,20 +394,6 @@
             ""
         ]
     },
-    "Bookmarks": {
-        "directories": [
-            "Services/Bookmarks"
-        ],
-        "name": "Bookmarks",
-        "first_maintainer": "akill(149)",
-        "second_maintainer": "",
-        "tester": "miriamhoelscher(25370)",
-        "testcase_writer": "kunkel(115)",
-        "model": "Classic",
-        "coordinators": [
-            ""
-        ]
-    },
     "Plugin Slots": {
         "directories": [
             "Services/Component"
@@ -354,6 +428,20 @@
         "first_maintainer": "mjansen(8784)",
         "second_maintainer": "bheyser(14300)",
         "tester": "kunkel(115)",
+        "testcase_writer": "kunkel(115)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
+    "Dashboard": {
+        "directories": [
+            "Services/Dashboard"
+        ],
+        "name": "Dashboard",
+        "first_maintainer": "akill(149)",
+        "second_maintainer": "",
+        "tester": "",
         "testcase_writer": "kunkel(115)",
         "model": "Classic",
         "coordinators": [
@@ -624,19 +712,17 @@
             ""
         ]
     },
-    "Personal Desktop": {
+    "AssessmentQuestion": {
         "directories": [
-            "Services/PersonalDesktop"
+            "Services/QTI"
         ],
-        "name": "Personal Desktop",
-        "first_maintainer": "akill(149)",
+        "name": "AssessmentQuestion",
+        "first_maintainer": "",
         "second_maintainer": "",
         "tester": "",
-        "testcase_writer": "kunkel(115)",
+        "testcase_writer": "",
         "model": "Classic",
-        "coordinators": [
-            ""
-        ]
+        "coordinators": []
     },
     "Rating": {
         "directories": [
@@ -773,6 +859,20 @@
         "second_maintainer": "",
         "tester": "suittenpointner(3458)",
         "testcase_writer": "bromberger(198)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
+    "VirusScanner": {
+        "directories": [
+            "Services/VirusScanner"
+        ],
+        "name": "VirusScanner",
+        "first_maintainer": "rschenk(18065)",
+        "second_maintainer": "akill(149)",
+        "tester": "tloewen(41553)",
+        "testcase_writer": "tloewen(41553)",
         "model": "Classic",
         "coordinators": [
             ""
@@ -1493,6 +1593,26 @@
             ""
         ]
     },
+    "File": {
+        "directories": [
+            "Services/BackgroundTasks",
+            "Services/FileDelivery",
+            "Services/FileSystem",
+            "Services/FileUpload",
+            "Services/Preview",
+            "Services/WebAccessChecker",
+            "Modules/File"
+        ],
+        "name": "File",
+        "first_maintainer": "fschmid(21087)",
+        "second_maintainer": "akill(149)",
+        "tester": "daniwe4(54500)",
+        "testcase_writer": "daniwe4(54500)",
+        "model": "Classic",
+        "coordinators": [
+            ""
+        ]
+    },
     "Category and Repository": {
         "directories": [
             "Services/Container",
@@ -1508,27 +1628,6 @@
         "second_maintainer": "smeyer(191)",
         "tester": "miriamhoelscher(25370)",
         "testcase_writer": "kunkel(115)",
-        "model": "Classic",
-        "coordinators": [
-            ""
-        ]
-    },
-    "File": {
-        "directories": [
-            "Services/BackgroundTasks",
-            "Services/FileDelivery",
-            "Services/FileSystem",
-            "Services/FileUpload",
-            "Services/Preview",
-            "Services/VirusScanner",
-            "Services/WebAccessChecker",
-            "Modules/File"
-        ],
-        "name": "File",
-        "first_maintainer": "fschmid(21087)",
-        "second_maintainer": "akill(149)",
-        "tester": "daniwe4(54500)",
-        "testcase_writer": "daniwe4(54500)",
         "model": "Classic",
         "coordinators": [
             ""
